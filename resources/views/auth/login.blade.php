@@ -7,7 +7,7 @@
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block"><img src="{{ asset('https://csusm.edu.ph/wp-content/uploads/2017/07/CSUSeal600x600-300x300.png') }}" alt="" srcset=""></div>
+                        <div class="col-lg-6 d-none d-lg-block"><img src="{{ asset('https://csusm.edu.ph/wp-content/uploads/2017/07/CSUSeal600x600-300x300.png') }}" alt="CSU Logo" srcset=""></div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
