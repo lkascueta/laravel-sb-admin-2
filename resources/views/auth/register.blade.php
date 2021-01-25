@@ -1,72 +1,99 @@
-@extends('layouts.auth')
+@extends('layouts.auth');
+<div class="page-wrapper">
+    <div class="container-fluid mt-0">
+        <div class="col-12">
+            <section class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-sm-8">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="card-header text-center"><img class="img-fluid" src="{{ asset('img/gonzaga.png') }}" alt="" srcset=""></div>
+                                <div class="card-body">
+                                    <div class="row justify-content-md-center">
+                                        <div class="col-md-8">
+                                                @if ($errors->any())
+                                                    <div class="alert alert-danger border-left-danger" role="alert">
+                                                        <ul class="pl-4 my-2">
+                                                            @foreach ($errors->all() as $error)
+                                                                <li>{{ $error }}</li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                @endif
 
-@section('main-content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-xl-10 col-lg-12 col-md-9">
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block"><img src="{{ asset('img/cover-login.png') }}" class="img-fluid mx-auto d-block rounded p-5" alt="CSU" srcset=""></div>
-                        <div class="col-lg-6">
-                            <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">{{ __('Register') }}</h1>
-                                </div>
 
-                                @if ($errors->any())
-                                    <div class="alert alert-danger border-left-danger" role="alert">
-                                        <ul class="pl-4 my-2">
-                                            @foreach ($errors->all() as $error)
-                                                <li>{{ $error }}</li>
-                                            @endforeach
-                                        </ul>
+
+                                            <form method="POST" action="{{ route('register') }}" class="user">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <div class="form-group">
+                                                    <label for="name" class="sr-only">
+                                                        Yourname
+                                                    </label>
+                                                    <input type="text" name="name" id="name"
+                                                        class="form-control"
+                                                        placeholder="{{ __('Name') }}"
+                                                        value="{{ old('name') }}">
+                                                </div>
+                                                <div class="form-group">
+                                                  {{--   <label for="username" class="sr-only">
+                                                        Yourname
+                                                    </label> --}}
+                                                    <input type="text" name="username" id="username"
+                                                        class="form-control"
+                                                        placeholder="{{ __('Username') }}"
+                                                        value="{{ old('username') }}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="email" class="sr-only">
+                                                        Email Address
+                                                    </label>
+                                                    <input type="email" name="email" id="email"
+                                                        class="form-control"
+                                                        placeholder="{{ __('E-Mail Address') }}"
+                                                        value="{{ old('email') }}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="password" class="sr-only">Password</label>
+                                                    <input type="password" name="password" id="password" value=""
+                                                        class="form-control"
+                                                        placeholder="{{ __('Password') }}"
+                                                        autocomplete="current-password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="password" class="sr-only">Password</label>
+                                                    <input type="password" name="password_confirmation" id="password"
+                                                    class="form-control" placeholder="{{ __('Confirm Password') }}" required>
+                                                </div>
+
+
+
+{{--                                             <button type="submit" class="btn btn-primary btn-block mt-3" id="loginbtn">Log in</button> --}}
+
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                    {{ __('Register') }}
+                                                </button>
+                                            </div>
+                                            </form>
+
+                                            <hr>
+
+                                            <div class="text-center">
+                                                <a class="small" href="{{ route('login') }}">
+                                                    {{ __('Already have an account? Login!') }}
+                                                </a>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                @endif
-
-                                <form method="POST" action="{{ route('register') }}" class="user">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('Name') }}" value="{{ old('name') }}" required autofocus>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="username" placeholder="{{ __('Username') }}" value="{{ old('username') }}" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="{{ old('email') }}" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" name="password" placeholder="{{ __('Password') }}" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            {{ __('Register') }}
-                                        </button>
-                                    </div>
-                                </form>
-
-                                <hr>
-
-                                <div class="text-center">
-                                    <a class="small" href="{{ route('login') }}">
-                                        {{ __('Already have an account? Login!') }}
-                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
+
+
 </div>
-@endsection
+</div>
