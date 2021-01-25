@@ -26,15 +26,29 @@
                                                     <label for="password" class="sr-only">Password</label>
                                                     <input type="password" name="password" id="password" value=""
                                                         class="form-control"
-                                                        placeholder="Password"
+                                                        placeholder="{{ __('Password') }}"
                                                         autocomplete="current-password">
                                                 </div>
-                                                <div class="rememberpass mt-3">
+{{--                                                 <div class="rememberpass mt-3">
                                                     <input type="checkbox" name="rememberusername" id="rememberusername" value="1"  />
                                                     <label for="rememberusername">Remember username</label>
+                                                </div> --}}
+
+
+                                                <div class="form-group">
+                                                    <div class="custom-control custom-checkbox small">
+                                                        <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                                        <label class="custom-control-label" for="remember">{{ __('Remember Me') }}</label>
+                                                    </div>
                                                 </div>
 
-                                            <button type="submit" class="btn btn-primary btn-block mt-3" id="loginbtn">Log in</button>
+{{--                                             <button type="submit" class="btn btn-primary btn-block mt-3" id="loginbtn">Log in</button> --}}
+
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                                    {{ __('Login') }}
+                                                </button>
+                                            </div>
                                             </form>
 
                                             <hr>
