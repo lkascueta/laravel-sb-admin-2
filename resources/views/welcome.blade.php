@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('tempreg') }}">TEMP LOGIN</a>
+                    <a href="#">TEMP LOGIN</a>
                     <a href="https://lens.csugonzaga.net/">CSU LENS</a>
                     <a href="https://www.csu.edu.ph/">CSU WEBSITE</a>
                     <a href="https://odms.csugonzaga.net/login">ODMS</a>

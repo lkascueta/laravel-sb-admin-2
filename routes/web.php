@@ -20,9 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/tempreg', function(){
-    return view('tempreg');
-})->name('tempreg');
+Route::get('/welcome', function(){
+    return view('welcome');
+})->name('welcome');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::put('/profile', 'ProfileController@update')->name('profile.update');

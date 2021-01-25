@@ -73,6 +73,9 @@
                                                 </div>
                                             @endif
  --}}
+                                            <div class="text-center">
+                                                <a href="{{ route('welcome') }}">Go Home</a>
+                                            </div>
                                             @if (Route::has('register'))
                                                 <div class="text-center">
                                                     <a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>

@@ -79,6 +79,10 @@
                                             <hr>
 
                                             <div class="text-center">
+                                                <a href="{{ route('welcome') }}">Go Home</a>
+                                            </div>
+
+                                            <div class="text-center">
                                                 <a class="small" href="{{ route('login') }}">
                                                     {{ __('Already have an account? Login!') }}
                                                 </a>
