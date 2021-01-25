@@ -20,7 +20,7 @@
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link href="{{ asset('https://www.csu.edu.ph/img/favicon.ico') }}" rel="icon" type="image/png">
+    <link href="{{ asset('/img/favicon.ico') }}" rel="icon" type="image/png">
 </head>
 <body id="page-top">
 
