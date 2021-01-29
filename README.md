@@ -51,7 +51,7 @@ Laravel SB Admin 2 uses some open-source third-party libraries/packages, many th
 
 `register`
 
-<img src="https://imgur.com/AuiH2OH">
+<img src="https://i.imgur.com/AuiH2OH.png">
 
 ***
 
