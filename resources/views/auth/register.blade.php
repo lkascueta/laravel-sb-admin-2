@@ -79,12 +79,12 @@
                                             <hr>
 
                                             <div class="text-center">
-                                                <a href="{{ route('welcome') }}">Go Home</a>
+                                                <a href="{{ route('welcome') }}"><i class="fas fa-home p-2"></i>Go Home</a>
                                             </div>
 
                                             <div class="text-center">
                                                 <a class="small" href="{{ route('login') }}">
-                                                    {{ __('Already have an account? Login!') }}
+                                                    <i class="fas fa-sign-in-alt p-2"></i>{{ __('Already have an account? Login!') }}
                                                 </a>
                                             </div>
 

@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ asset('/css/style.css')}}">
+
     <!-- Favicon -->
     <link href="{{ asset('/img/favicon.ico') }}" rel="icon" type="image/png">
 </head>
@@ -32,7 +34,8 @@
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
             <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+                {{-- <i class="fas fa-laugh-wink"></i> --}}
+                <i class="far fa-life-ring"></i>
             </div>
             <div class="sidebar-brand-text mx-3"><sup>CSU HelpDesk</sup></div>
         </a>
