@@ -45,13 +45,13 @@ Laravel SB Admin 2 uses some open-source third-party libraries/packages, many th
 
 `login`
 
-<img src="https://imgur.com/YjGp6Sbl.png">
+<img src="https://i.imgur.com/6FwdDVp.png">
 
 ***
 
 `register`
 
-<img src="https://imgur.com/Wj09cu4l.png">
+<img src="https://i.imgur.com/AuiH2OH.png">
 
 ***
 

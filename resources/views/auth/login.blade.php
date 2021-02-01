@@ -74,11 +74,11 @@
                                             @endif
  --}}
                                             <div class="text-center">
-                                                <a href="{{ route('welcome') }}">Go Home</a>
+                                                <a href="{{ route('welcome') }}"><i class="fas fa-home p-2"></i>Go Home</a>
                                             </div>
                                             @if (Route::has('register'))
                                                 <div class="text-center">
-                                                    <a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
+                                                    <i class="fas fa-user-plus p-1"></i><a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
                                                 </div>
                                             @endif
 
