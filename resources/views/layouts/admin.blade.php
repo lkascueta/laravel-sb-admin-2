@@ -64,16 +64,38 @@
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                 aria-expanded="true" aria-controls="collapseTwo">
-                <i class="fas fa-fw fa-cog"></i>
+                <i class="fas fa-fw fa-users"></i>
                 <span>Manage Users</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header"></h6>
+                    {{-- <h6 class="collapse-header"></h6> --}}
                     <a class="collapse-item" href="buttons.html">Admin</a>
                     <a class="collapse-item" href="cards.html">User</a>
                 </div>
             </div>
+        </li>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse3"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-clipboard-list"></i>
+                <span>View Task</span>
+            </a>
+            <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="buttons.html">Task</a>
+                    <a class="collapse-item" href="cards.html">Completed Tasks</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item {{ Nav::isRoute('a') }}">
+            <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-flag"></i>
+                <span>{{ __('Generate Report') }}</span>
+            </a>
         </li>
 
         <!-- Divider -->
@@ -121,7 +143,7 @@
                 </button>
 
                 <!-- Topbar Search -->
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+{{--                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                         <div class="input-group-append">
@@ -130,7 +152,7 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </form> --}}
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
