@@ -7,7 +7,8 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        {{-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> --}}
+        <link href="{{ asset('fonts/nunito.css') }}" rel="stylesheet">
 
         <link href="{{ asset('https://www.csu.edu.ph/img/favicon.ico') }}" rel="icon" type="image/png">
 
