@@ -85,7 +85,7 @@
             </a>
             <div id="collapse3" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="buttons.html">Task</a>
+                    <a class="collapse-item" href="{{ route('task') }}">Task</a>
                     <a class="collapse-item" href="cards.html">Completed Tasks</a>
                 </div>
             </div>

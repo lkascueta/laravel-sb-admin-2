@@ -30,3 +30,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/task', function () {
+    return view('task');
+})->name('task');
