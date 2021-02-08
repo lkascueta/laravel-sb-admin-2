@@ -143,7 +143,7 @@
                 </button>
 
             <!-- Topbar Clock -->
-                <ul class="nav-left text-danger text-lg m-0" id="clock"><!-- clock -->
+                <ul class="nav-left text-danger text-lg m-0 h2" id="clock"><!-- clock -->
                     <span class="wrap-time">
                         <span class="time-unit">
                             <span class="large day">Mon</span>
