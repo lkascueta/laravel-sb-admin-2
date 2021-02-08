@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::count();
-
+        $countuser = DB::table('users')->count();
         $widget = [
             'users' => $users,
             //...

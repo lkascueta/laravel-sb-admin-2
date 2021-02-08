@@ -142,17 +142,35 @@
                     <i class="fa fa-bars"></i>
                 </button>
 
-                <!-- Topbar Search -->
-{{--                 <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
-                                <i class="fas fa-search fa-sm"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form> --}}
+            <!-- Topbar Clock -->
+                <ul class="nav-left text-danger text-lg m-0" id="clock"><!-- clock -->
+                    <span class="wrap-time">
+                        <span class="time-unit">
+                            <span class="large day">Mon</span>
+                            {{-- <span class="small">DAY</span> --}}
+                        </span>
+                        <span class="time-unit">
+                            <span class="large hours">00</span>
+                            {{-- <span class="small">HOURS</span> --}}
+                        </span>
+                        <span class="separator">:</span>
+                        <span class="time-unit">
+                            <span class="large minutes">00</span>
+                            {{-- <span class="small">MINUTES</span> --}}
+                        </span>
+                        <span class="separator">:</span>
+                        <span class="time-unit">
+                            <span class="large seconds">00</span>
+                            {{-- <span class="small">SECONDS</span> --}}
+                        </span>
+                        <span class="time-unit">
+                            <span class="large period">AM</span>
+                            <span class="small"></span>
+                        </span>
+                    </span>
+                </ul>
+
+                <!-- clock end -->
 
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -375,5 +393,48 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+
+<!-- js clock -->
+<script>
+    // The week days
+    const weekDays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
+    // The Clock Ticker
+    function clockTicker()
+    {
+        // Clock units
+        var date    = new Date();
+        var day     = date.getDay();
+        var hrs     = date.getHours();
+        var mins    = date.getMinutes();
+        var secs    = date.getSeconds();
+
+        // Update hours value if greater than 12
+        if( hrs > 12 )
+        {
+            hrs = hrs - 12;
+            document.querySelector( '#clock .period' ).innerHTML = 'PM';
+        }
+        else
+        {
+            document.querySelector( '#clock .period' ).innerHTML = 'AM';
+        }
+        // Pad the single digit units by 0
+        hrs     = hrs < 10 ? "0" + hrs : hrs;
+        mins    = mins < 10 ? "0" + mins : mins;
+        secs    = secs < 10 ? "0" + secs : secs;
+
+// Refresh the unit values
+        document.querySelector( '#clock .day' ).innerHTML       = weekDays[ day ];
+        document.querySelector( '#clock .hours' ).innerHTML     = hrs;
+        document.querySelector( '#clock .minutes' ).innerHTML   = mins;
+        document.querySelector( '#clock .seconds' ).innerHTML   = secs;
+
+    // Refresh the clock every 1 second
+    requestAnimationFrame( clockTicker );
+    }
+    // Start the clock
+    clockTicker();
+</script>
+
 </body>
 </html>
