@@ -26,12 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::count();
-        $countuser = DB::table('users')->count();
+
         $widget = [
             'users' => $users,
             //...
         ];
 
         return view('home', compact('widget'));
+
     }
 }
