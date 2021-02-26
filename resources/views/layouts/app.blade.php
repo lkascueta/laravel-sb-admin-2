@@ -18,6 +18,7 @@
     <link href="{{ asset('fonts/nunito.css') }}" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href={{ asset('css/ajksdgh.css') }}>
 </head>
 <body>
     <div id="app">
